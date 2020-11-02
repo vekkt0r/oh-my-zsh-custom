@@ -13,6 +13,7 @@ alias tgs='tig status'
 alias -g F='find . -name'
 alias -g G='| grep'
 alias -g NF='*(oc[1])'
+alias -g NF1='*(om[2])'
 alias -g CF='| c++filt'
 alias -g XG='| xargs grep'
 

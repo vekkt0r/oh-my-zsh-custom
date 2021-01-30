@@ -8,6 +8,7 @@ alias reboot='echo nope'
 alias tb='tmux set-buffer'
 alias tgf='tig --first-parent'
 alias tgs='tig status'
+alias fd='fd --glob'
 
 # Global alias
 alias -g F='find . -name'

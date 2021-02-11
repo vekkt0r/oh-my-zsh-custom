@@ -5,7 +5,11 @@ function get_host {
   r4*)
     echo "$fg[yellow]" ;;
   *)
-    echo "$fg[green]" ;;
+    if [ -e /.dockerenv ]; then
+      echo "🐳 $fg[blue]"
+    else
+      echo "$fg[green]"
+    fi ;;
   esac
 	#echo "@%{$FG[142]%}"`hostname`"%{$reset_color%}"
 }

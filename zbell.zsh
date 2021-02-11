@@ -65,6 +65,9 @@ zbell_end() {
 	fi
 }
 
+# make sure we can actually send notifications
+whence notify-send || return
+
 # register the functions as hooks
 add-zsh-hook preexec zbell_begin
 add-zsh-hook precmd zbell_end

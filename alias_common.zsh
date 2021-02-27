@@ -9,6 +9,7 @@ alias tb='tmux set-buffer'
 alias tgf='tig --first-parent'
 alias tgs='tig status'
 alias fd='fd --glob'
+alias gh='git rev-parse HEAD'
 
 # Global alias
 alias -g F='find . -name'
@@ -19,7 +20,7 @@ alias -g CF='| c++filt'
 alias -g XG='| xargs grep'
 
 # Suffix alias
-alias -s {h,cpp,log,txt}=less
+alias -s {c,h,cpp,log,txt,json}=bat
 alias -s {html}=w3m
 
 # Functions

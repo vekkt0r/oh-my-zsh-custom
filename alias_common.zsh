@@ -27,3 +27,10 @@ alias -s {html}=w3m
 gapp() {
   git diff -U0 | grepdiff --output-matching=hunk -E $1 | git apply --cached --unidiff-zero
 }
+
+# Git commit with current rebase-amend message
+gcr() {
+  local top=$(git rev-parse --show-toplevel)/.git
+  [ -f $top ] && top=$(awk '{print $2}' ${top})
+  git commit -c `cat ${top}/rebase-merge/amend`
+}

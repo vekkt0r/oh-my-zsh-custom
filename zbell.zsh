@@ -66,7 +66,7 @@ zbell_end() {
 }
 
 # make sure we can actually send notifications
-whence notify-send || return
+whence notify-send > /dev/null || return
 
 # register the functions as hooks
 add-zsh-hook preexec zbell_begin
